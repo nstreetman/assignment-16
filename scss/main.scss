@@ -1,0 +1,9 @@
+
+*{ box-sizing: border-box }
+img {
+ width: 100%;
+ display: block;
+}
+
+@import "_background-image.scss";
+@import "_text-styles.scss"
