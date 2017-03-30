@@ -3,17 +3,24 @@
  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PROJECT</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>Streetman - Assignment 16</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
  </head>
  <body>
     <div id="app-container">
-       <div class="tomato-red timer-box">
+       <div id="timer" class="tomato-red timer-box">
          <p class="timer-numerals">25:00</p>
+         <p class="timer-complete">Pomodoro Complete!</p>
       </div>
       <div class=input-box>
-        <p>input-box</p>
+        <form class="input">
+          <input id="task-input" type="text">
+          <button class="submit" type="button">
+            <i class="fa fa-plus" aria-hidden='true'></i>
+          </button>
+        </form>
+
       </div>
 
     </div>
