@@ -1,9 +1,11 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 img {
   width: 100%;
-  display: block; }
+  display: block;
+}
 
 .tomato-red {
   background-image: url("../images/tomato-red-silhouette.svg");
@@ -11,7 +13,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-  height: 900px; }
+  height: 900px;
+}
 
 .timer-numerals {
   color: #ed9d00;
@@ -20,6 +23,25 @@ img {
   font-family: sans-serif;
   text-shadow: 2px 2px black;
   text-align: center;
-  padding-top: 400px; }
+  padding-top: 400px;
+}
+
+.timer-complete {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  height: 50px;
+}
+
+.input {
+  height: 75px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.submit {
+  
+}
 
 /*# sourceMappingURL=styles.css.map */
