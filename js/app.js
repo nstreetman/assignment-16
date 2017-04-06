@@ -19,18 +19,18 @@ submitButtonEl.addEventListener('click', function(){
   let theTaskInput = document.getElementById("task-input").value;
   taskBox.innerHTML = theTaskInput;
   taskInputForm.style.display = 'none';
-  let startingTimerValue = 1500000;
+  let startingTimerValue = 65000;
   let timerValue = setInterval(function(){
   startingTimerValue = startingTimerValue - 1000
     if (startingTimerValue < 60000) {
-      timerEl.style.backgroundImage = "url(../images/tomato-red-silhouette.svg)";
+      timerEl.style.backgroundImage = "url(./images/tomato-red-silhouette.svg)";
     }
-    if (startingTimerValue < 0){
+    if (startingTimerValue === 0){
       clearInterval(timerValue)
       timerNumEl.style.display = 'none';
       timerCompleteEl.style.display = 'block';
       taskBox.style.display = 'none';
-      timerEl.style.backgroundImage = "url(../images/tomato-red-silhouette.svg)";
+      timerEl.style.backgroundImage = "url(./images/tomato-green-silhouette.svg)";
     }
 
   let timeOnTimer = convertToMinutes(startingTimerValue)
