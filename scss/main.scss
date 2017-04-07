@@ -6,4 +6,10 @@ img {
 }
 
 @import "_background-image.scss";
-@import "_text-styles.scss"
+@import "_text-styles.scss";
+@import "_input-styles.scss";
+
+body {
+  background-color: chartreuse;
+
+}

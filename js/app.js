@@ -22,15 +22,22 @@ submitButtonEl.addEventListener('click', function(){
   let startingTimerValue = 65000;
   let timerValue = setInterval(function(){
   startingTimerValue = startingTimerValue - 1000
-    if (startingTimerValue < 60000) {
+    if (startingTimerValue < 70000) {
+      taskBox.style.display = 'block';
       timerEl.style.backgroundImage = "url(./images/tomato-red-silhouette.svg)";
+      timerCompleteEl.style.display ='none';
+    }
+    if (startingTimerValue <=60000) {
+      taskBox.style.display = 'block';
+      timerEl.style.backgroundImage = "url(./images/tomato-green-silhouette.svg)";
     }
     if (startingTimerValue === 0){
       clearInterval(timerValue)
+      timerEl.style.backgroundImage = "url(./images/tomato-red-silhouette.svg)";
       timerNumEl.style.display = 'none';
       timerCompleteEl.style.display = 'block';
       taskBox.style.display = 'none';
-      timerEl.style.backgroundImage = "url(./images/tomato-green-silhouette.svg)";
+      timerCompleteEl.style.display ='block';
     }
 
   let timeOnTimer = convertToMinutes(startingTimerValue)
