@@ -18,16 +18,17 @@ let taskBox = document.querySelector (".task-box");
 submitButtonEl.addEventListener('click', function(){
   let theTaskInput = document.getElementById("task-input").value;
   taskBox.innerHTML = theTaskInput;
-  taskInputForm.style.display = 'none';
-  let startingTimerValue = 65000;
+  taskInputForm.style.display = 'none'
+  let startingTimerValue = 1500000;
   let timerValue = setInterval(function(){
   startingTimerValue = startingTimerValue - 1000
-    if (startingTimerValue < 70000) {
+    if (startingTimerValue <= 70000) {
       taskBox.style.display = 'block';
       timerEl.style.backgroundImage = "url(./images/tomato-red-silhouette.svg)";
       timerCompleteEl.style.display ='none';
     }
     if (startingTimerValue <=60000) {
+      timerCompleteEl.style.display ='none';
       taskBox.style.display = 'block';
       timerEl.style.backgroundImage = "url(./images/tomato-green-silhouette.svg)";
     }
@@ -37,7 +38,6 @@ submitButtonEl.addEventListener('click', function(){
       timerNumEl.style.display = 'none';
       timerCompleteEl.style.display = 'block';
       taskBox.style.display = 'none';
-      timerCompleteEl.style.display ='block';
     }
 
   let timeOnTimer = convertToMinutes(startingTimerValue)
